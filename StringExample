@@ -1,0 +1,54 @@
+package com.pratice;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class GetCharAtGivenIndex {
+	
+	public static void main(String[] args) {
+		String s = "This is String Example";
+		// charAt()
+		System.out.println("Zero Index Char :: "+s.charAt(0));
+		// compareTo ()
+		String firstString = "Prakhar Jain";
+		String secondString = "PRAKHAR Jain";
+		
+		int reslt = firstString.compareToIgnoreCase(secondString);
+		System.out.println("Compare output in Int :: "+reslt);
+		if(reslt == 0)
+			System.out.println("String is equal");
+		if(reslt < 0)
+			System.out.println("FirstString is less than Second String");
+		if(reslt > 0)
+			System.out.println("FirstString is greater than Second String");
+		
+		// 3. CONCATE STRING
+		String fName = "Prakhar";
+		String lName = "Jain";
+		String fullName = fName.concat(lName);
+		System.out.println(fullName);
+		
+		// 4. Specific Char Sequence
+		String ex = "example.com";
+		String ex1 = "example.com";
+		boolean flag = ex.contentEquals(ex1);
+		System.out.println(flag);
+		StringBuffer sb = new StringBuffer(ex);
+		System.out.println(ex.contentEquals(sb));
+		// 5. DateTime method
+		Date date = new Date();
+		System.out.println(date);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-YYYY hh::mm:ss");
+		System.out.println(sdf.format(date));
+		
+		// 6. 
+		String str1 = "Java Exercises";
+        String str2 = "Java Exercises";
+        String str3 = str2.intern();
+        
+        System.out.println(str1.equals(str2));
+        System.out.println(str1 == str2);
+		
+	}
+
+}
